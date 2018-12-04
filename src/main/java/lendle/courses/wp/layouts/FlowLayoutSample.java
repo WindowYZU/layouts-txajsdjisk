@@ -7,6 +7,7 @@ package lendle.courses.wp.layouts;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
@@ -29,7 +30,14 @@ public class FlowLayoutSample {
         //1. create five buttons, add them to the frame
         //2. test the effect of setAlignment
         //3. test the effect of hgap and vgap
+        layout.setHgap(30);
+        layout.setVgap(30);
+        layout.setAlignment(FlowLayout.RIGHT);
         
+        for(int i = 0;i<=6;i++){
+            JButton button=new JButton("button**"+i);
+            frame.add(button);
+        }
         //////////////////////////////////////////////////////////////////////
         
         frame.setVisible(true);
